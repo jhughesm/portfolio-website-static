@@ -11456,6 +11456,22 @@ pre .code {
   }
 }
 
+/* Adjust the photo for mobile devices */
+@media (max-width: 768px) {
+  .header-content img {
+      object-fit: cover; /* Ensure the image covers the container without distortion */
+      object-position: center; /* Center the image */
+      width: 100%; /* Make sure it fits the container width */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Optional: If it's a background image */
+  .header {
+      background-size: contain; /* Ensure the full image is shown */
+      background-position: center;
+  }
+}
+
 .navbar.affix .brand-txt {
   bottom: 0;
   opacity: 1;
