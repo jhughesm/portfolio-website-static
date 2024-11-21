@@ -11456,19 +11456,13 @@ pre .code {
   }
 }
 
-/* Adjust the photo for mobile devices */
 @media (max-width: 768px) {
-  .header-content img {
-      object-fit: cover; /* Ensure the image covers the container without distortion */
-      object-position: center; /* Center the image */
-      width: 100%; /* Make sure it fits the container width */
-      height: auto; /* Maintain aspect ratio */
-  }
-
-  /* Optional: If it's a background image */
   .header {
-      background-size: contain; /* Ensure the full image is shown */
-      background-position: center;
+      background-size: contain; /* Ensure the full image fits in the viewport */
+      background-position: center; /* Keep the image centered */
+      background-attachment: scroll; /* Prevent the image from being fixed, which may cause issues on mobile */
+      height: auto; /* Allow the header height to adjust dynamically */
+      min-height: 400px; /* Optional: set a minimum height for better aesthetics */
   }
 }
 
