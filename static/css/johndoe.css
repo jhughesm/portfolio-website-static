@@ -11456,16 +11456,6 @@ pre .code {
   }
 }
 
-@media (max-width: 768px) {
-  .header {
-      background-size: contain; /* Ensure the full image fits in the viewport */
-      background-position: center; /* Keep the image centered */
-      background-attachment: scroll; /* Prevent the image from being fixed, which may cause issues on mobile */
-      height: auto; /* Allow the header height to adjust dynamically */
-      min-height: 400px; /* Optional: set a minimum height for better aesthetics */
-  }
-}
-
 .navbar.affix .brand-txt {
   bottom: 0;
   opacity: 1;
@@ -11523,6 +11513,25 @@ pre .code {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .header {
+      background-size: cover; /* Keep cover for mobile */
+      background-position: 40% center; /* Shift to the left */
+      background-attachment: scroll; /* Avoid fixed background on mobile for smoother scrolling */
+      height: auto;
+      min-height: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+      background-size: cover;
+      background-position: 80% center; /* Adjust even more for smaller screens */
+      height: auto;
+      min-height: 400px;
+  }
 }
 
 .header .container {
