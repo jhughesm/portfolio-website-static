@@ -11528,7 +11528,7 @@ pre .code {
 @media (max-width: 576px) {
   .header {
       background-size: cover;
-      background-position: 80% center; /* Adjust even more for smaller screens */
+      background-position: 85% center; /* Adjust even more for smaller screens */
       height: auto;
       min-height: 400px;
   }
